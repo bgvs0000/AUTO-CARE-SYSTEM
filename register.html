@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account · AutoCare</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='24' cy='8' r='4' fill='%233b82f6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="bg-white">
+  <div class="auth">
+    <aside class="auth-visual" aria-hidden="true">
+      <div data-logo-light></div>
+      <div>
+        <div class="car" data-auth-car data-body="pickup"></div>
+        <h2 class="mt-24">Your digital garage starts here.</h2>
+        <p>Register your vehicles, get service reminders on time and unlock member-only shop promos.</p>
+      </div>
+      <div class="auth-feats"><span data-icon-before="calendar">Online booking</span><span data-icon-before="file">Digital invoices</span><span data-icon-before="gift">Member promos</span></div>
+    </aside>
+
+    <main class="auth-form-wrap">
+      <div class="auth-top"><div data-logo></div><span class="small muted">Already a member? <a class="link" href="login.html">Login</a></span></div>
+      <div class="auth-form">
+        <h1>Create your account</h1>
+        <p class="sub">It takes less than a minute.</p>
+        <form data-register novalidate aria-label="Customer registration">
+          <div class="field"><label class="label" for="r-name">Full Name <span class="req">*</span></label><input class="input" id="r-name" name="name" required autocomplete="name" placeholder="Juan Dela Cruz"></div>
+          <div class="form-grid">
+            <div class="field"><label class="label" for="r-email">Email <span class="req">*</span></label><input class="input" id="r-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
+            <div class="field"><label class="label" for="r-phone">Phone <span class="req">*</span></label><input class="input" id="r-phone" name="phone" required autocomplete="tel" placeholder="+63 9XX XXX XXXX"></div>
+          </div>
+          <div class="field">
+            <label class="label" for="r-pass">Password <span class="req">*</span></label>
+            <div class="input-icon"><span data-icon="lock" style="display:contents"></span><input class="input" id="r-pass" name="password" type="password" required autocomplete="new-password" placeholder="At least 8 characters"><button type="button" class="pw-toggle" data-pw aria-label="Show password"></button></div>
+            <div class="pw-meter" data-meter><span></span><span></span><span></span><span></span></div>
+            <span class="help" data-meter-text>Use 8+ characters with a number and a symbol.</span>
+          </div>
+          <div class="field"><label class="label" for="r-pass2">Confirm Password <span class="req">*</span></label><input class="input" id="r-pass2" name="confirm" type="password" required autocomplete="new-password" placeholder="Re-enter password"></div>
+          <label class="check"><input type="checkbox" name="terms" required> I agree to the Terms of Service and Privacy Policy</label>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+        </form>
+      </div>
+      <a class="small muted" href="index.html" data-icon-before="arrow-left" style="display:inline-flex;gap:6px;align-items:center">Back to website</a>
+    </main>
+  </div>
+
+  <script src="assets/js/core/icons.js"></script>
+  <script src="assets/js/core/ui.js"></script>
+  <script src="assets/js/core/art.js"></script>
+  <script src="assets/js/data/vehicles.js"></script>
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/data/demo.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/shell.js"></script>
+  <script src="assets/js/pages/auth.js"></script>
+</body>
+</html>

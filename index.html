@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoCare — Your Car. Our Expertise.</title>
+  <meta name="description" content="Professional automotive services, maintenance, tires, wheels, and vehicle care — all in one platform.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='24' cy='8' r='4' fill='%233b82f6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body class="bg-white">
+
+  <main id="home">
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Automotive Service Center · Tire &amp; Wheel Shop</span>
+          <h1 class="h1" id="hero-title">Your Car.<br><span>Our Expertise.</span></h1>
+          <p class="lead">Professional automotive services, maintenance, tires, wheels, and vehicle care — all in one platform.</p>
+          <div class="hero-cta">
+            <a class="btn btn-blue btn-lg" href="customer.html#/book" data-icon-after="arrow-right">Book a Service</a>
+            <a class="btn btn-glass btn-lg" href="shop.html" data-icon-before="store">Explore Shop</a>
+          </div>
+          <div class="hero-meta">
+            <div><div class="v">12,400+</div><div class="l">Vehicles serviced</div></div>
+            <div><div class="v">4.9 / 5</div><div class="l">Average service rating</div></div>
+            <div><div class="v">3,800+</div><div class="l">Products in stock</div></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ring"></div><div class="ring r2"></div>
+          <div class="floor"></div>
+          <div class="car-stage" data-hero-car></div>
+          <div class="float-card fc1"><span class="ic" data-icon="check-circle"></span><div><b>Ready for Release</b><span>Toyota Fortuner · NBC 4521</span></div></div>
+          <div class="float-card fc2"><span class="ic" data-icon="calendar"></span><div><b>PMS Booked</b><span>Tomorrow · 9:00 AM</span></div></div>
+          <div class="float-card fc3"><span class="ic" data-icon="tire"></span><div><b>Fits your Vios</b><span>205/45 R17 · 4x100 · ET+40</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUICK BOOK BAR ================= -->
+    <div class="container quickbar">
+      <form class="card" data-quickbook aria-label="Quick booking">
+        <div class="field"><label class="label" for="qb-brand">Vehicle brand</label><select class="select" id="qb-brand" name="brand"></select></div>
+        <div class="field"><label class="label" for="qb-model">Model</label><select class="select" id="qb-model" name="model"></select></div>
+        <div class="field"><label class="label" for="qb-service">Service</label><select class="select" id="qb-service" name="service"></select></div>
+        <button class="btn btn-primary btn-lg" type="submit" data-icon-after="arrow-right">Book Now</button>
+      </form>
+    </div>
+
+    <!-- ================= BRANDS ================= -->
+    <section class="section-sm">
+      <div class="container">
+        <p class="small muted text-center mb-24">Authorized dealer of trusted tire, wheel &amp; parts brands</p>
+        <div class="brands-strip" data-brands></div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section gray" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">What we do</span>
+            <h2 class="h2 mt-12" id="services-title">Complete car care under one roof</h2>
+            <p class="lead">From scheduled maintenance to performance wheel fitment — handled by certified technicians with transparent pricing.</p>
+          </div>
+          <a class="btn btn-outline" href="customer.html#/book" data-icon-after="arrow-right">See all services</a>
+        </div>
+        <div class="services-grid stagger" data-services></div>
+      </div>
+    </section>
+
+    <!-- ================= VEHICLES ================= -->
+    <section class="section white" id="vehicles" aria-labelledby="vehicles-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Vehicles we service</span>
+            <h2 class="h2 mt-12" id="vehicles-title">Built for the cars Filipinos drive</h2>
+            <p class="lead">OEM-spec parts, fitment data and service schedules for the most common makes and models in the Philippines.</p>
+          </div>
+          <div class="searchbar" style="width:min(320px,100%)"><span data-icon="search"></span><input class="input" type="search" placeholder="Search make or model…" data-veh-search aria-label="Search vehicles"></div>
+        </div>
+        <div class="chips mb-24" data-veh-brands role="tablist" aria-label="Filter by brand"></div>
+        <div class="grid-auto" data-veh-grid style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px"></div>
+        <div class="text-center mt-24"><button class="btn btn-outline" data-veh-more>Show more vehicles</button></div>
+      </div>
+    </section>
+
+    <!-- ================= SHOP CATEGORIES ================= -->
+    <section class="section gray" aria-labelledby="shop-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Automotive shop</span>
+            <h2 class="h2 mt-12" id="shop-title">Tires, mags, parts &amp; accessories</h2>
+            <p class="lead">Genuine products from authorized distributors — with free installation on eligible items.</p>
+          </div>
+          <a class="btn btn-primary" href="shop.html" data-icon-after="arrow-right">Visit the Shop</a>
+        </div>
+        <div class="cat-grid" data-cats></div>
+        <h3 class="h3 mt-32 mb-16">Featured products</h3>
+        <div class="grid-4" data-featured></div>
+      </div>
+    </section>
+
+    <!-- ================= FITMENT BAND ================= -->
+    <section class="section white">
+      <div class="container">
+        <div class="fit-band reveal">
+          <div>
+            <span class="eyebrow" style="color:var(--blue-light)">Smart fitment</span>
+            <h2 class="h2 mt-12" style="color:#fff">Find tires &amp; mags that fit — in seconds.</h2>
+            <p class="lead mt-12">Pick your vehicle and we’ll show compatible tire sizes, PCD, offset range and center bore — plus every product that fits.</p>
+          </div>
+          <form class="fit-form" data-fitform aria-label="Tire finder">
+            <div class="form-grid">
+              <div class="field"><label class="label" for="ff-brand">Brand</label><select class="select" id="ff-brand" name="brand"></select></div>
+              <div class="field"><label class="label" for="ff-model">Model</label><select class="select" id="ff-model" name="model"></select></div>
+              <div class="field"><label class="label" for="ff-year">Year</label><select class="select" id="ff-year" name="year"></select></div>
+              <div class="field"><label class="label" for="ff-type">Looking for</label><select class="select" id="ff-type" name="type"><option value="tires">Tires</option><option value="wheels">Mags / Wheels</option></select></div>
+            </div>
+            <button class="btn btn-blue btn-lg btn-block" type="submit" data-icon-before="search">Show compatible products</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section gray" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head reveal"><div><span class="eyebrow">How it works</span><h2 class="h2 mt-12" id="how-title">Service without the guesswork</h2></div></div>
+        <div class="steps-grid stagger">
+          <div class="card card-hover step-card"><div class="icon-tile" data-icon="car"></div><div class="n mt-16">STEP 01</div><h4>Register your vehicle</h4><p>Add your car once — we track mileage, history and the next recommended service.</p></div>
+          <div class="card card-hover step-card"><div class="icon-tile" data-icon="calendar"></div><div class="n mt-16">STEP 02</div><h4>Book a time slot</h4><p>Pick a service, date and time. Get an instant estimate and confirmation.</p></div>
+          <div class="card card-hover step-card"><div class="icon-tile" data-icon="activity"></div><div class="n mt-16">STEP 03</div><h4>Track in real time</h4><p>Follow every stage — from inspection to quality check — right from your phone.</p></div>
+          <div class="card card-hover step-card"><div class="icon-tile" data-icon="shield-check"></div><div class="n mt-16">STEP 04</div><h4>Drive away worry-free</h4><p>Digital invoice, warranty on parts &amp; labor and reminders for your next visit.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section white" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal" data-about-art></div>
+          <div class="reveal">
+            <span class="eyebrow">About AutoCare</span>
+            <h2 class="h2 mt-12" id="about-title">A modern service center, run like a precision workshop.</h2>
+            <p class="lead mt-16">AutoCare combines a full-service repair shop, a tire &amp; wheel center and an automotive store into one connected platform — so every job, part and peso is accounted for.</p>
+            <div class="about-points">
+              <div class="about-point"><span class="ic" data-icon="award"></span><div><b>Certified technicians</b><p>Specialists in mechanical, electrical, aircon, tires, wheels, detailing and body repair.</p></div></div>
+              <div class="about-point"><span class="ic" data-icon="shield-check"></span><div><b>Transparent work orders</b><p>Itemized parts and labor, approved by you before any work begins.</p></div></div>
+              <div class="about-point"><span class="ic" data-icon="box"></span><div><b>Genuine products</b><p>Sourced from authorized Philippine distributors, with manufacturer warranty.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="numbers stagger">
+          <div class="card card-hover"><div class="v">15</div><div class="l">Years in service</div></div>
+          <div class="card card-hover"><div class="v">8</div><div class="l">Service bays</div></div>
+          <div class="card card-hover"><div class="v">24</div><div class="l">Certified technicians</div></div>
+          <div class="card card-hover"><div class="v">98%</div><div class="l">On-time release rate</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section gray" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head reveal"><div><span class="eyebrow">Contact</span><h2 class="h2 mt-12" id="contact-title">Visit or message us</h2></div></div>
+        <div class="contact-grid">
+          <div class="card contact-info">
+            <div class="contact-row"><span class="ic" data-icon="pin"></span><div><b>Main Branch</b><span data-set="address"></span></div></div>
+            <div class="contact-row"><span class="ic" data-icon="phone"></span><div><b>Call or Text</b><span data-set="phone"></span></div></div>
+            <div class="contact-row"><span class="ic" data-icon="mail"></span><div><b>Email</b><span data-set="email"></span></div></div>
+            <div class="contact-row"><span class="ic" data-icon="clock"></span><div><b>Hours</b><span data-set="hours"></span></div></div>
+            <div class="map-box" role="img" aria-label="Map placeholder"><span class="pin" data-icon="pin"></span></div>
+          </div>
+          <form class="card card-body" data-contact novalidate aria-label="Contact form">
+            <h3 class="h4 mb-16">Send us a message</h3>
+            <div class="form-grid">
+              <div class="field"><label class="label" for="ct-name">Full name <span class="req">*</span></label><input class="input" id="ct-name" name="name" required placeholder="Juan Dela Cruz"></div>
+              <div class="field"><label class="label" for="ct-phone">Mobile number</label><input class="input" id="ct-phone" name="phone" placeholder="+63 9XX XXX XXXX"></div>
+              <div class="field span-2"><label class="label" for="ct-email">Email <span class="req">*</span></label><input class="input" id="ct-email" type="email" name="email" required placeholder="you@email.com"></div>
+              <div class="field span-2"><label class="label" for="ct-topic">Topic</label><select class="select" id="ct-topic" name="topic"><option>Service inquiry</option><option>Tire / wheel quotation</option><option>Shop order</option><option>Fleet account</option><option>Other</option></select></div>
+              <div class="field span-2"><label class="label" for="ct-msg">Message <span class="req">*</span></label><textarea class="textarea" id="ct-msg" name="message" required placeholder="Tell us about your vehicle and what you need…"></textarea></div>
+            </div>
+            <button class="btn btn-primary mt-16" type="submit" data-icon-before="send">Send message</button>
+          </form>
+        </div>
+        <div class="cta-band mt-32 reveal">
+          <div><h3 class="h2" style="font-size:28px">Ready for your next service?</h3><p class="muted mt-8">Book online in under a minute. Same-day slots available.</p></div>
+          <div class="btn-group"><a class="btn btn-primary btn-lg" href="customer.html#/book">Book a Service</a><a class="btn btn-outline btn-lg" href="register.html">Create an account</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Core -->
+  <script src="assets/js/core/icons.js"></script>
+  <script src="assets/js/core/ui.js"></script>
+  <script src="assets/js/core/art.js"></script>
+  <!-- Data -->
+  <script src="assets/js/data/vehicles.js"></script>
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/data/demo.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/shell.js"></script>
+  <!-- Page -->
+  <script src="assets/js/shop/shop-common.js"></script>
+  <script src="assets/js/pages/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Console Login · AutoCare</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='24' cy='8' r='4' fill='%233b82f6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+  <main class="admin-auth">
+    <div style="width:100%;max-width:420px">
+      <div class="text-center mb-24" data-logo-light style="display:flex;justify-content:center"></div>
+      <div class="admin-card">
+        <div class="shield" data-icon="shield-check"></div>
+        <span class="badge badge-dark no-dot">STAFF &amp; ADMIN CONSOLE</span>
+        <h1 class="h3 mt-12">Sign in to Admin</h1>
+        <p class="muted small mt-4">Authorized personnel only. All access is logged.</p>
+
+        <form data-admin-login novalidate aria-label="Admin login">
+          <div class="field"><label class="label" for="a-id">Employee ID or Email</label>
+            <div class="input-icon"><span data-icon="badge" style="display:contents"></span><input class="input" id="a-id" name="id" required autocomplete="username" placeholder="EMP-0001 or name@autocare.ph"></div></div>
+          <div class="field"><label class="label" for="a-pass">Password</label>
+            <div class="input-icon"><span data-icon="lock" style="display:contents"></span><input class="input" id="a-pass" name="password" type="password" required autocomplete="current-password" placeholder="••••••••"><button type="button" class="pw-toggle" data-pw aria-label="Show password"></button></div></div>
+          <div class="field"><label class="label" for="a-role">Sign in as</label>
+            <select class="select" id="a-role" name="role"><option>Administrator</option><option>Service Manager</option><option>Service Advisor</option><option>Inventory Staff</option><option>Cashier</option></select></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" data-icon-before="lock">Continue securely</button>
+        </form>
+
+        <div data-otp-step class="hidden">
+          <div class="alert mt-16"><span data-icon="phone" style="display:contents"></span><div>We sent a 6-digit verification code to <b data-otp-phone>+63 917 ••• ••99</b>. It expires in <b data-otp-timer>5:00</b>.</div></div>
+          <!-- Simulated SMS (demo only — in production the code is sent via SMS/email) -->
+          <div class="sms-preview mt-12" data-sms>
+            <div class="sms-head"><span data-icon="send" style="display:contents"></span><b>AutoCare</b><span class="muted">· SMS · now</span></div>
+            <div class="sms-body">Your AutoCare Admin verification code is <b class="mono" data-otp-code>------</b>. Do not share this code with anyone.</div>
+            <button type="button" class="btn btn-soft btn-sm mt-8" data-autofill>Auto-fill code</button>
+          </div>
+          <form data-otp class="mt-16" aria-label="Two-factor verification">
+            <div class="otp">
+              <input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 1"><input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 2"><input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+              <input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 4"><input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 5"><input class="input" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+            </div>
+            <button class="btn btn-blue btn-lg btn-block mt-16" type="submit">Verify &amp; Sign in</button>
+            <div class="flex between items-center mt-12 small">
+              <button type="button" class="link" data-otp-back>&larr; Use another account</button>
+              <button type="button" class="link" data-resend disabled>Resend code in <span data-resend-t>30</span>s</button>
+            </div>
+          </form>
+        </div>
+        <div class="demo-hint mt-16">Demo — <b>admin@autocare.ph</b> / <b>admin123</b></div>
+        <div class="secure-strip"><span data-icon="shield" style="display:contents"></span>256-bit TLS · 2-step verification · Session timeout 30 min</div>
+      </div>
+      <p class="foot">Not staff? <a href="login.html">Customer login</a> · <a href="index.html">Back to website</a></p>
+    </div>
+  </main>
+
+  <script src="assets/js/core/icons.js"></script>
+  <script src="assets/js/core/ui.js"></script>
+  <script src="assets/js/core/art.js"></script>
+  <script src="assets/js/data/vehicles.js"></script>
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/data/demo.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/shell.js"></script>
+  <script src="assets/js/pages/auth.js"></script>
+</body>
+</html>
